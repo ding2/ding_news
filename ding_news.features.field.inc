@@ -381,6 +381,7 @@ function ding_news_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => 'list_image/news',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -469,6 +470,7 @@ function ding_news_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => 'main_image/news',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
