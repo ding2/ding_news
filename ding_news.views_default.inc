@@ -280,8 +280,8 @@ function ding_news_views_default_views() {
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['label'] = '';
   $handler->display->display_options['fields']['field_category']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_category']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_category']['alter']['path'] = '#';
+  $handler->display->display_options['fields']['field_category']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['field_category']['alter']['path'] = 'node/[field_category-tid]';
   $handler->display->display_options['fields']['field_category']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['replace_spaces'] = 0;
@@ -293,12 +293,12 @@ function ding_news_views_default_views() {
   $handler->display->display_options['fields']['field_category']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_category']['element_class'] = 'label label-for';
   $handler->display->display_options['fields']['field_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_category']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_category']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_category']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_category']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_category']['field_api_classes'] = 0;
   /* Field: Field: Library */
   $handler->display->display_options['fields']['group_audience']['id'] = 'group_audience';
@@ -331,7 +331,8 @@ function ding_news_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['text'] = '- [name] -';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['name']['alter']['external'] = 0;
@@ -445,11 +446,13 @@ function ding_news_views_default_views() {
   $handler->display->display_options['fields']['view_node']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['view_node']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['view_node']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['view_node']['element_type'] = 'p';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['view_node']['hide_empty'] = 0;
   $handler->display->display_options['fields']['view_node']['empty_zero'] = 0;
   $handler->display->display_options['fields']['view_node']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
@@ -510,7 +513,10 @@ function ding_news_views_default_views() {
     t('Shows the latest 5 (change in view) news on the default list form'),
     t('more'),
     t('Dummy if non'),
+    t('node/[field_category-tid]'),
     t('#'),
+    t('- [name] -'),
+    t('Læs mere'),
     t('List (floated)'),
     t('Shows the 5 (can be changed in the view) latests news in the floated list form. '),
   );
