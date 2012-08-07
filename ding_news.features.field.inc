@@ -322,7 +322,7 @@ function ding_news_field_default_fields() {
   $fields['node-ding_news-field_files'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '5',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_files',
@@ -393,6 +393,7 @@ function ding_news_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
+            0 => 0,
             'audio' => 0,
             'default' => 0,
             'image' => 'image',
@@ -603,11 +604,10 @@ function ding_news_field_default_fields() {
       ),
       'module' => 'text',
       'settings' => array(
-        'max_length' => '255',
         'profile2_private' => FALSE,
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'text_long',
     ),
     'field_instance' => array(
       'bundle' => 'ding_news',
@@ -638,7 +638,7 @@ function ding_news_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_manchet',
       'label' => 'Manchet',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -647,9 +647,9 @@ function ding_news_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '60',
+          'rows' => '5',
         ),
-        'type' => 'text_textfield',
+        'type' => 'text_textarea',
         'weight' => '2',
       ),
     ),
