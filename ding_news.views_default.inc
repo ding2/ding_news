@@ -408,30 +408,29 @@ function ding_news_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_list_image']['field_api_classes'] = 0;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['field_ding_body']['id'] = 'field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['table'] = 'field_data_field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['field'] = 'field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['label'] = '';
-  $handler->display->display_options['fields']['field_ding_body']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['max_length'] = '200';
-  $handler->display->display_options['fields']['field_ding_body']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ding_body']['element_default_classes'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['field_api_classes'] = 0;
+  /* Field: Content: Manchet */
+  $handler->display->display_options['fields']['field_manchet']['id'] = 'field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['table'] = 'field_data_field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['field'] = 'field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['label'] = '';
+  $handler->display->display_options['fields']['field_manchet']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_manchet']['element_default_classes'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['field_api_classes'] = 0;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -661,33 +660,29 @@ function ding_news_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_list_image']['field_api_classes'] = 0;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['field_ding_body']['id'] = 'field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['table'] = 'field_data_field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['field'] = 'field_ding_body';
-  $handler->display->display_options['fields']['field_ding_body']['label'] = '';
-  $handler->display->display_options['fields']['field_ding_body']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['max_length'] = '200';
-  $handler->display->display_options['fields']['field_ding_body']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['field_ding_body']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ding_body']['element_default_classes'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['field_ding_body']['settings'] = array(
-    'trim_length' => '200',
-  );
-  $handler->display->display_options['fields']['field_ding_body']['field_api_classes'] = 0;
+  /* Field: Content: Manchet */
+  $handler->display->display_options['fields']['field_manchet']['id'] = 'field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['table'] = 'field_data_field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['field'] = 'field_manchet';
+  $handler->display->display_options['fields']['field_manchet']['label'] = '';
+  $handler->display->display_options['fields']['field_manchet']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_manchet']['element_default_classes'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_manchet']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_manchet']['field_api_classes'] = 0;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
