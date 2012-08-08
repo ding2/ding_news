@@ -26,12 +26,12 @@ projects[cache_actions][version] = 2.0-alpha3
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.0-rc1"
-projects[ctools][patch][] = "http://drupal.org/files/issues/user_edit_form-p0-format-1184168.patch"
+projects[ctools][version] = "1.0"
 
 projects[features][type] = module
 projects[features][subdir] = contrib
-projects[features][version] = 1.0-beta4
+projects[features][version] = 1.0-rc3
+
 
 ; Changed to download as git repository due to failing when applying
 ; patch when version of git is lower than 1.7.5.4 and option working-copy
@@ -56,4 +56,4 @@ projects[strongarm][version] = 2.0-beta4
 
 projects[views][type] = module
 projects[views][subdir] = contrib
-projects[views][version] = 3.0
+projects[views][version] = 3.3
