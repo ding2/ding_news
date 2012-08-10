@@ -30,9 +30,11 @@ function ding_news_views_default_views() {
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['group_rendered'] = 1;
   $handler->display->display_options['style_options']['row_class'] = 'list list-simple';
@@ -180,33 +182,12 @@ function ding_news_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Field: Library (group_audience:nid) */
-  $handler->display->display_options['arguments']['ding_library_nid']['id'] = 'ding_library_nid';
-  $handler->display->display_options['arguments']['ding_library_nid']['table'] = 'field_data_group_audience';
-  $handler->display->display_options['arguments']['ding_library_nid']['field'] = 'ding_library_nid';
-  $handler->display->display_options['arguments']['ding_library_nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_options']['argument'] = 'all';
-  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['ding_library_nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['ding_library_nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['ding_library_nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['ding_library_nid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['ding_library_nid']['not'] = 0;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
-  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
-  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
-  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
+  /* Contextual filter: Content: Category (field_category) */
+  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -739,6 +720,27 @@ function ding_news_views_default_views() {
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+
+  /* Display: Full List */
+  $handler = $view->new_display('panel_pane', 'Full List', 'panel_pane_1');
+  $handler->display->display_options['display_description'] = 'A list of all the news in all categories with all tags.';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Library (group_audience:nid) */
+  $handler->display->display_options['arguments']['ding_library_nid']['id'] = 'ding_library_nid';
+  $handler->display->display_options['arguments']['ding_library_nid']['table'] = 'field_data_group_audience';
+  $handler->display->display_options['arguments']['ding_library_nid']['field'] = 'ding_library_nid';
+  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['ding_library_nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['argument_input'] = array(
+    'ding_library_nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Field: Library (group_audience:nid)',
+    ),
+  );
   $translatables['ding_news'] = array(
     t('Master'),
     t('Read more'),
@@ -747,6 +749,9 @@ function ding_news_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
     t('author'),
     t('All'),
     t('Latest (List-default)'),
@@ -762,6 +767,9 @@ function ding_news_views_default_views() {
     t('Latest (List-simple)'),
     t('Shows the latest 5 (configure in view) news in a simple list form.'),
     t('<i class="icon-chevron-right"></i>[title]'),
+    t('Full List'),
+    t('A list of all the news in all categories with all tags.'),
+    t('View panes'),
   );
   $export['ding_news'] = $view;
 

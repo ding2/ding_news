@@ -406,20 +406,8 @@ news/%tid:name',
     $pane->subtype = 'ding_news-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'empty',
-        1 => 'argument_term_1',
-      ),
-    );
-    $pane->cache = array(
-      'method' => 'rules',
-      'settings' => array(
-        'granularity' => 'context',
-        'language' => 1,
-        'cache_key' => 'panel_context:page-ding_news:page_ding_news_panel_context',
-      ),
-    );
+    $pane->configuration = array();
+    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
@@ -483,7 +471,7 @@ news/%tid:name',
     $display->content['new-6'] = $pane;
     $display->panels['right'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-4';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ding_news'] = $page;
