@@ -52,7 +52,7 @@ projects[similarterms][patch][] = https://raw.github.com/ding2/patches/master/si
 
 projects[strongarm][type] = module
 projects[strongarm][subdir] = contrib
-projects[strongarm][version] = 2.0-beta4
+projects[strongarm][version] = "2.0"
 
 projects[views][type] = module
 projects[views][subdir] = contrib
