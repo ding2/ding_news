@@ -36,7 +36,7 @@ function ding_news_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['group_rendered'] = 1;
+  $handler->display->display_options['style_options']['grouping'] = '';
   $handler->display->display_options['style_options']['row_class'] = 'list list-simple';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Author */
@@ -538,7 +538,7 @@ function ding_news_views_default_views() {
   $handler = $view->new_display('ctools_context', 'Teasers (Floated)', 'ctools_context_1');
   $handler->display->display_options['display_description'] = 'Shows the 5 (can be changed in the view) latests news in the floated list form. ';
   $handler->display->display_options['style_plugin'] = 'ctools_context';
-  $handler->display->display_options['style_options']['group_rendered'] = 1;
+  $handler->display->display_options['style_options']['grouping'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 0;
@@ -1004,13 +1004,39 @@ function ding_news_views_default_views() {
   $handler->display->display_options['arguments']['ding_library_nid']['table'] = 'field_data_group_audience';
   $handler->display->display_options['arguments']['ding_library_nid']['field'] = 'ding_library_nid';
   $handler->display->display_options['arguments']['ding_library_nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_options']['argument'] = 'Der er ingen nyheder for det valgte bibliotek.';
+  $handler->display->display_options['arguments']['ding_library_nid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['ding_library_nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['ding_library_nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['ding_library_nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['ding_library_nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['ding_library_nid']['validate_options']['types'] = array(
+    'ding_library' => 'ding_library',
+  );
+  $handler->display->display_options['arguments']['ding_library_nid']['validate_options']['access'] = 0;
+  $handler->display->display_options['arguments']['ding_library_nid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['ding_library_nid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['ding_library_nid']['not'] = 0;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'category' => 'category',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'ding_library_nid' => array(
       'type' => 'context',
@@ -1021,8 +1047,8 @@ function ding_news_views_default_views() {
       'label' => 'Field: Library (group_audience:nid)',
     ),
     'tid' => array(
-      'type' => 'none',
-      'context' => 'entity:taxonomy_term.tid',
+      'type' => 'context',
+      'context' => 'node_edit_form.nid',
       'context_optional' => 1,
       'panel' => '1',
       'fixed' => '',
