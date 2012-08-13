@@ -22,7 +22,7 @@ projects[ting_reference][download][tag] = "7.x-0.18"
 
 projects[cache_actions][type] = module
 projects[cache_actions][subdir] = contrib
-projects[cache_actions][version] = 2.0-alpha5
+projects[cache_actions][version] = "2.0-alpha5"
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = contrib
@@ -56,4 +56,4 @@ projects[strongarm][version] = "2.0"
 
 projects[views][type] = module
 projects[views][subdir] = contrib
-projects[views][version] = 3.3
+projects[views][version] = "3.3"
