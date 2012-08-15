@@ -25,38 +25,4 @@ function ding_news_entity_info_alter(&$entity_info) {
   );
 }
 
-/**
- * Implements hook_theme_registry_alter(). 
- * 
- * To make Drupal recognize tpl files used for views in the ding_news module folder.
- * 
- */
-function ding_news_theme_registry_alter(&$theme_registry) {
-  $my_path = drupal_get_path('module', 'ding_news') . '/themes';
-   
-  
-  $theme_registry_copy = $theme_registry;
-  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $my_path);
-  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
-  
-  $hooks = array('node');  // you can do this to any number of template theme hooks
-    
-  // insert our module
-  foreach ($hooks as $h) {
-    //if theme paths does not exists in the current registry hook
-    if(!isset($theme_registry[$h]['theme paths'])) {
-      $theme_registry[$h]['theme paths'] = array($my_path);
-    }
-    else { 
-      _ding_news_insert_after_first_element($theme_registry[$h]['theme paths'], $my_path);
-    }
-  }
-}
-
-function _ding_news_insert_after_first_element(&$a, $element) {
-  $first_element = array_shift($a);
-  array_unshift($a, $first_element, $element);
-}
- 
-
 include_once('ding_news.features.inc');

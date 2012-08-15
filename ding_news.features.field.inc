@@ -10,7 +10,7 @@
 function ding_news_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'comment-comment_node_ding_news-comment_body'
+  // Exported field: 'comment-comment_node_ding_news-comment_body'.
   $fields['comment-comment_node_ding_news-comment_body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function ding_news_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -72,7 +73,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-ding_content_tags'
+  // Exported field: 'node-ding_news-ding_content_tags'.
   $fields['node-ding_news-ding_content_tags'] = array(
     'field_config' => array(
       'active' => '1',
@@ -93,6 +94,7 @@ function ding_news_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -156,7 +158,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_category'
+  // Exported field: 'node-ding_news-field_category'.
   $fields['node-ding_news-field_category'] = array(
     'field_config' => array(
       'active' => '1',
@@ -177,6 +179,7 @@ function ding_news_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -232,7 +235,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_ding_body'
+  // Exported field: 'node-ding_news-field_ding_body'.
   $fields['node-ding_news-field_ding_body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -253,6 +256,7 @@ function ding_news_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -318,7 +322,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_files'
+  // Exported field: 'node-ding_news-field_files'.
   $fields['node-ding_news-field_files'] = array(
     'field_config' => array(
       'active' => '1',
@@ -339,6 +343,7 @@ function ding_news_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
@@ -393,8 +398,8 @@ function ding_news_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
-            0 => 0,
             'audio' => 0,
+            0 => 0,
             'default' => 0,
             'image' => 'image',
             'video' => 0,
@@ -407,7 +412,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_list_image'
+  // Exported field: 'node-ding_news-field_list_image'.
   $fields['node-ding_news-field_list_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -428,6 +433,7 @@ function ding_news_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -492,7 +498,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_main_image'
+  // Exported field: 'node-ding_news-field_main_image'.
   $fields['node-ding_news-field_main_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -513,6 +519,7 @@ function ding_news_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -581,7 +588,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_manchet'
+  // Exported field: 'node-ding_news-field_manchet'.
   $fields['node-ding_news-field_manchet'] = array(
     'field_config' => array(
       'active' => '1',
@@ -602,6 +609,7 @@ function ding_news_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'profile2_private' => FALSE,
@@ -655,7 +663,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-field_materials'
+  // Exported field: 'node-ding_news-field_materials'.
   $fields['node-ding_news-field_materials'] = array(
     'field_config' => array(
       'active' => '1',
@@ -665,6 +673,7 @@ function ding_news_field_default_fields() {
       'field_name' => 'field_materials',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'ting_reference',
       'settings' => array(),
       'translatable' => '0',
@@ -714,7 +723,7 @@ function ding_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ding_news-group_audience'
+  // Exported field: 'node-ding_news-group_audience'.
   $fields['node-ding_news-group_audience'] = array(
     'field_config' => array(
       'active' => '1',
@@ -735,6 +744,7 @@ function ding_news_field_default_fields() {
           0 => 'gid',
         ),
       ),
+      'locked' => '0',
       'module' => 'og',
       'no_ui' => TRUE,
       'settings' => array(),

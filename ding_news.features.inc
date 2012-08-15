@@ -22,10 +22,7 @@ function ding_news_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function ding_news_views_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => "3.0");
-  }
+  return array("version" => "3.0");
 }
 
 /**
@@ -34,7 +31,7 @@ function ding_news_views_api() {
 function ding_news_image_default_styles() {
   $styles = array();
 
-  // Exported image style: ding_news_default
+  // Exported image style: ding_news_default.
   $styles['ding_news_default'] = array(
     'name' => 'ding_news_default',
     'effects' => array(
@@ -56,7 +53,7 @@ function ding_news_image_default_styles() {
     ),
   );
 
-  // Exported image style: ding_news_floated
+  // Exported image style: ding_news_floated.
   $styles['ding_news_floated'] = array(
     'name' => 'ding_news_floated',
     'effects' => array(
