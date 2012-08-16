@@ -117,7 +117,7 @@ function ding_news_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'search_result' => array(
           'label' => 'above',
@@ -199,11 +199,11 @@ function ding_news_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -273,7 +273,7 @@ function ding_news_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '4',
         ),
         'search_result' => array(
           'label' => 'above',
@@ -364,7 +364,7 @@ function ding_news_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => 7,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -451,7 +451,7 @@ function ding_news_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -624,11 +624,11 @@ function ding_news_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -691,7 +691,7 @@ function ding_news_field_default_fields() {
             'view_mode' => 'teaser',
           ),
           'type' => 'ting_reference_default',
-          'weight' => '2',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -762,7 +762,7 @@ function ding_news_field_default_fields() {
           'module' => 'og',
           'settings' => array(),
           'type' => 'og_list_default',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'search_result' => array(
           'label' => 'above',

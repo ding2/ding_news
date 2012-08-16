@@ -101,6 +101,9 @@ function ding_news_default_page_manager_handlers() {
       'right' => NULL,
       'top' => NULL,
       'bottom' => NULL,
+      'grid_10_center' => NULL,
+      'grid_3_left' => NULL,
+      'grid_3_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -118,7 +121,7 @@ function ding_news_default_page_manager_handlers() {
       'links' => 1,
       'no_extras' => 0,
       'override_title' => 0,
-      'override_title_text' => '',
+      'override_title_text' => '%title',
       'identifier' => '',
       'link' => 0,
       'leave_node_title' => 1,
@@ -175,6 +178,27 @@ function ding_news_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'grid_3_right';
+    $pane->type = 'block';
+    $pane->subtype = 'similarterms-ding_content_tags';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = '';
+    $display->content['new-3'] = $pane;
+    $display->panels['grid_3_right'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'grid_3_right';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
     $pane->shown = TRUE;
@@ -198,27 +222,6 @@ function ding_news_default_page_manager_handlers() {
         'granularity' => 'context',
       ),
     );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = '';
-    $display->content['new-3'] = $pane;
-    $display->panels['grid_3_right'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'grid_3_right';
-    $pane->type = 'block';
-    $pane->subtype = 'similarterms-ding_content_tags';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );

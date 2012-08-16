@@ -53,34 +53,6 @@ function ding_news_views_default_views() {
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['relationships']['uid']['required'] = 0;
-  /* Field: Content: List image */
-  $handler->display->display_options['fields']['field_list_image']['id'] = 'field_list_image';
-  $handler->display->display_options['fields']['field_list_image']['table'] = 'field_data_field_list_image';
-  $handler->display->display_options['fields']['field_list_image']['field'] = 'field_list_image';
-  $handler->display->display_options['fields']['field_list_image']['label'] = '';
-  $handler->display->display_options['fields']['field_list_image']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_list_image']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_list_image']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_list_image']['element_default_classes'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_list_image']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['field_list_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_list_image']['settings'] = array(
-    'image_style' => 'ding_news_floated',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_list_image']['field_api_classes'] = 0;
   /* Field: Field: Library */
   $handler->display->display_options['fields']['group_audience']['id'] = 'group_audience';
   $handler->display->display_options['fields']['group_audience']['table'] = 'field_data_group_audience';
@@ -246,12 +218,6 @@ function ding_news_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Category (field_category) */
-  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1346,7 +1312,6 @@ function ding_news_views_default_views() {
     t('author'),
     t('news/[field_category-tid]'),
     t('- [name] -'),
-    t('All'),
     t('Teasers (Default)'),
     t('Shows the latest 5 (change in view) news on the default list form'),
     t('more'),
@@ -1361,6 +1326,7 @@ function ding_news_views_default_views() {
     t('<i class="icon-chevron-right"></i>[title]'),
     t('Full List (category)'),
     t('A list of all the news in all categories with all tags.'),
+    t('All'),
     t('View panes'),
     t('Full List (library)'),
     t('A list of all news in all categories with all tags filtred by library'),
