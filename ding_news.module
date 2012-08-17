@@ -26,4 +26,3 @@ function ding_news_entity_info_alter(&$entity_info) {
 }
 
 include_once('ding_news.features.inc');
-
