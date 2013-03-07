@@ -6,22 +6,18 @@ core = 7.x
 projects[ding_content][type] = module
 projects[ding_content][download][type] = git
 projects[ding_content][download][url] = git@github.com:ding2/ding_content.git
-projects[ding_content][download][branch] = "development"
 
 projects[ding_page][type] = "module"
 projects[ding_page][download][type] = "git"
 projects[ding_page][download][url] = "git@github.com:ding2/ding_page.git"
-projects[ding_page][download][branch] = "development"
 
 projects[ding_user_roles][type] = "module"
 projects[ding_user_roles][download][type] = "git"
 projects[ding_user_roles][download][url] = "git@github.com:ding2/ding_user_roles.git"
-projects[ding_user_roles][download][branch] = "development"
 
 projects[ting_reference][type] = module
 projects[ting_reference][download][type] = git
 projects[ting_reference][download][url] = git@github.com:ding2/ting_reference.git
-projects[ting_reference][download][branch] = "development"
 
 ; Contrib modules
 
