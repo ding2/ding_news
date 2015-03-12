@@ -5,17 +5,17 @@ api = 2
 projects[ding_content][type] = "module"
 projects[ding_content][download][type] = "git"
 projects[ding_content][download][url] = "git@github.com:ding2/ding_content.git"
-projects[ding_content][download][branch] = "master"
+projects[ding_content][download][tag] = "v2.0.0"
 
 projects[ding_page][type] = "module"
 projects[ding_page][download][type] = "git"
 projects[ding_page][download][url] = "git@github.com:ding2/ding_page.git"
-projects[ding_page][download][branch] = "master"
+projects[ding_page][download][tag] = "v2.0.0"
 
 projects[ting_reference][type] = "module"
 projects[ting_reference][download][type] = "git"
 projects[ting_reference][download][url] = "git@github.com:ding2/ting_reference.git"
-projects[ting_reference][download][branch] = "master"
+projects[ting_reference][download][tag] = "v2.0.0"
 
 projects[cache_actions][subdir] = "contrib"
 projects[cache_actions][version] = "2.0-alpha5"
