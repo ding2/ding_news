@@ -91,3 +91,4 @@ features[variable][] = scheduler_publish_enable_ding_news
 features[variable][] = scheduler_publish_touch_ding_news
 features[variable][] = scheduler_unpublish_enable_ding_news
 features[views_view][] = ding_news
+mtime = 1427142267
